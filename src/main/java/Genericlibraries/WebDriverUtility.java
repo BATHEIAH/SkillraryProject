@@ -182,7 +182,7 @@ try {
 public void ScrollToElement(Object element) 
 {
 JavascriptExecutor js=(JavascriptExecutor)driver;
-js.executeScript("arguments[0].ScrollIntoView(true)", element);
+js.executeScript("arguments[0].scrollIntoView(true)", element);
 }
 /**
  * this method select an element from the dropDown Using Value

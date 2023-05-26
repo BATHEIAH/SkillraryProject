@@ -28,7 +28,7 @@ public void addtoCart() {
 	
 	selenium.clickAddToCart();
 	web.handleAlert("ok");
-	soft.assertEquals(selenium.getmassage(),"Item Added to Cart");
+	soft.assertEquals(selenium.getmassage(),"Item added to cart");
 	
 	soft.assertAll();
 			

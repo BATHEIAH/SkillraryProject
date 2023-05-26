@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScript.SendContactDetails">
+      <class name="testScript.AddToCart">
         <methods>
-          <include name="SendContactDetails"/>
           <include name="Config"/>
           <include name="methodTearDown"/>
           <include name="methodConfig"/>
+          <include name="addtoCart"/>
           <include name="classTearDown"/>
         </methods>
-      </class> <!-- testScript.SendContactDetails -->
+      </class> <!-- testScript.AddToCart -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
