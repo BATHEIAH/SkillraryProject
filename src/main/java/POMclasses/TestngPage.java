@@ -5,70 +5,66 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 /**
- * this method contains elements and respective business libraries of testing page
- * @author Batheiah
+ * this class contains elements and respective business libraries of Testing page
+ * @author dileep
  *
  */
-public class TestngPage
-{
-	//Declaration
-	
-@FindBy(xpath="//h1[@class='page-header']")
-private WebElement pageheader;
+public class TestngPage {
+	// Declaration
+	@FindBy(xpath = "//h1[@class=\"page-header\"]")
+	private WebElement pageheader;
 
-@FindBy(id="Python")
-private WebElement pythonImage;
+	@FindBy(id = "Python")
+	private WebElement pythonimg;
 
-@FindBy(id="cartArea")
-private WebElement myCart;
+	@FindBy(id = "cartArea")
+	private WebElement cartarea;
 
-@FindBy(xpath="//ul/descendant::i[@class='fa fa-facebook']")
-private WebElement facebookIcon;
+	@FindBy(xpath = "//ul/descendant::i[@class=\"fa fa-facebook\"]")
+	private WebElement facebookicon;
 
-//initilization
+	// initialization
+	public TestngPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+	/**\
+	 * this method return page header odf selenium training page
+	 * @return
+	 */
 
-public TestngPage(WebDriver driver)
-{
-PageFactory.initElements(driver, this);	
-}
-//Utilization
-/**
- * this method returs the page header of selenium Training page
- * @return
- */
-public String getpageheader() 
-{
-	return pageheader.getText();
-}
-/**
- * this method is used to get python image
- * @return
- */
-public WebElement getPythonIcon() 
-{
-	return pythonImage;
-}
-/**
- * this method is used to get mycart area
- * @return
- */
-public WebElement getmyCart() 
-{
-	return myCart;
-}
-/**
- * this methos is used to get on facebook icon button
- * @return
- */
-public WebElement getfacebookIcon() 
-{
-	return facebookIcon;
-}
-/**
- * this method is used to click on facebook Icon 
- */
-public void Clickfacebook() 
-{
-	facebookIcon.click();
-}
+	// utilization
+	public String getpageheader() {
+		return pageheader.getText();
+	}
+	/**
+	 * this method get python imge 
+	 * @return
+	 */
+
+	public WebElement getpythonimage() {
+		return pythonimg;
+	}
+	/**
+	 * this method get cart details
+	 * @return
+	 */
+
+	public WebElement getmycart() {
+		return cartarea;
+	}
+	/**
+	 * this method get webElement facebook 
+	 * @return
+	 */
+
+	public WebElement getfacebookIcon() {
+		return facebookicon;
+	}
+	/**
+	 * this method click on facebook icon on page
+	 */
+
+	public void clickfacebook() {
+		facebookicon.click();
+	}
 }

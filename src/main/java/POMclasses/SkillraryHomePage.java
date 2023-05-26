@@ -1,65 +1,64 @@
 package POMclasses;
 
-import org.apache.commons.codec.language.bm.Languages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SkillraryHomePage 
-{
+public class SkillraryHomePage {
 //Declaration
-	@FindBy(xpath="//img[@alt='SkillRary']")
+	@FindBy(xpath = "//img[@alt='SkillRary']")
 	private WebElement logo;
-	
-	@FindBy(xpath="//a[text()=' GEARS ']")
+
+	@FindBy(xpath = "//a[text()=' GEARS ']")
 	private WebElement gearsTab;
-	
-	@FindBy(xpath="//ul[contains(@class,'dropdown-menu ')]/descendant::a[text()=' SkillRary Demo APP']")
+
+	@FindBy(xpath = "//ul[contains(@class,'dropdown-menu ')]/descendant::a[text()=' SkillRary Demo APP']")
 	private WebElement SkillraryDemoAppLink;
 	
-	@FindBy(xpath="//ul[contains(@class,'home_menu')]/li[1]")
-	private WebElement language;
+	@FindBy(xpath = "//ul[contains(@class, \"home_menu\")]/li[1]")
+	private WebElement lanuage;
 	
-	@FindBy(xpath="//ul[contains(@class,'home_menu')]/descendant::a[text()=' English ']")
+	@FindBy(xpath = "//ul[contains(@class, \"home_menu\")]/descendant::a[text()=\" English\"]")
 	private WebElement english;
 	
-	//Initialization
+
+	// Initialization
 	public SkillraryHomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	//Utilization
+
+	// Utilization
 	/**
 	 * this method is returns skillrary Home Page
+	 * 
 	 * @return
 	 */
-	public WebElement getLogo() 
-	{
-	return logo;	
+	public WebElement getLogo() {
+		return logo;
 	}
+
 	/**
 	 * this method is used click on gears Tab
-	 * @param gearsTab 
+	 * 
+	 * @param gearsTab
+	 * 
 	 */
-	public void ClickGearsTab() 
-	{
+	public void ClickGearsTab() {
 		gearsTab.click();
 	}
+
 	/**
 	 * this method is used to click on Skillrary Demo app link
+	 * 
 	 * @param SkillraryDemoApplink
 	 */
-	public void ClickSkillraryDemoApp()
-	{
-		SkillraryDemoAppLink.click();	
+	public void SkillraryDemoApp() {
+		SkillraryDemoAppLink.click();
 	}
-	/**
-	 * this metho is used to select English as default page
-	 */
-	public void ChooseEnglish() 
-	{
-		language.click();
+	public void Chooselanuage() {
+		lanuage.click();
 		english.click();
 	}
-	
+
 }

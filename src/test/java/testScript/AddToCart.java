@@ -12,7 +12,7 @@ public class AddToCart extends BaseClass {
 		SoftAssert soft = new SoftAssert();
 
 		home.ClickGearsTab();
-		home.ClickSkillraryDemoApp();
+		home.SkillraryDemoApp();
 		web.handleChildBrowser();
 
 		soft.assertTrue(demoApp.getlogo().contains("ECommerce"));

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import Genericlibraries.WebDriverUtility;
+import Genericlibraries.WebDriverutility;
 /**
  * this class contains elements and respective business libraries of selenium Training page
  * @author Batheiah
@@ -47,9 +47,9 @@ public String getpageheader() {
  * this method is used to double click on plus button
  * @param Web
  */
-public void DoubleClickPlusButton(WebDriverUtility Web)
+public void DoubleClickPlusButton(WebDriverutility Web)
 {
-Web.doubleclickonElement(plusbutton);	
+Web.DoubleclickElement(plusbutton);	
 }
 /**
  * this methos is used to get the quantity of Add Items

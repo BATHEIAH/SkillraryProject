@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import Genericlibraries.WebDriverUtility;
+import Genericlibraries.WebDriverutility;
 
 /**
  * This method is contains elements and respective business liabraries for
@@ -51,8 +51,8 @@ public class SkillraryDemoapp {
 	 * 
 	 * @param web
 	 */
-	public void mouseoverToCourse(WebDriverUtility web) {
-		web.MouseOver(courseTab);
+	public void mouseoverToCourse(WebDriverutility web) {
+		web.MOuseOver(courseTab);
 	}
 
 	/**
@@ -67,9 +67,9 @@ public class SkillraryDemoapp {
 	 * @param web
 	 * @param index
 	 */
-	public void SelectCatagory(WebDriverUtility web, int index)
+	public void SelectCatagory(WebDriverutility web, int index)
 	{
-		web.dropDown(categoryDD, index);
+		web.DropDown(categoryDD, index);
 	}
 
 	/**

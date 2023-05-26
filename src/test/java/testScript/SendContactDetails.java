@@ -15,17 +15,17 @@ public class SendContactDetails extends BaseClass
 	 SoftAssert soft=new SoftAssert();
 	 
 	 home.ClickGearsTab();
-	 home.ClickSkillraryDemoApp();
+	 home.SkillraryDemoApp();
 	 web.handleChildBrowser();
 
 	 soft.assertTrue(demoApp.getlogo().contains("ECommerce"));
 	 
-	 web.ScrollToElement(demoApp.getContactUs());
+	 web.ScrollElement(demoApp.getContactUs());
 	 demoApp.ClickContactUs();
 	 
 	 soft.assertTrue(contact.getpagelogo().isDisplayed());
 	 
-	 home.ChooseEnglish();
+	 
 	 Map<String,String>map=excel.readDataFromExcel("Sheet");
 	 contact.sendDetails(map.get("FullName"),map.get("Email"), map.get("Subject"), map.get("massage"));
 	 
